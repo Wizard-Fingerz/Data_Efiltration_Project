@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <main>
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="d-flex justify-content-center py-4">
+                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                  <img src="assets/img/logo.png" alt="">
+                  <span class="d-none d-lg-block">Welcome</span>
+                </a>
+              </div><!-- End Logo -->
+
+              <div class="card mb-3">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Data Exfiltration <br> Prediction System</h5>
+                    <p class="text-center small">Enter the following value</p>
+                  </div>
+
+                  <form class="row g-3 needs-validation" action='result' novalidate>
+                    <div class="col-4">
+                        <label for="stime" class="form-label">STIME</label>
+                        <div class="input-group has-validation">
+                          <input type="text" name="stime" id="stime" class="form-control" placeholder="Record Start Time" required = "">
+                          <div class="invalid-feedback">Please the flgs</div>
+                        </div>
+                      </div>
+                    <div class="col-4">
+                      <label for="flgs" class="form-label">FLGS</label>
+                      <div class="input-group has-validation">
+                        <input type="text" name="flgs" id="flgs" class="form-control" placeholder="" required = "">
+                        <div class="invalid-feedback">Please the flgs</div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                    <label for="proto" class="form-label">PROTO</label>
+                        <div class="input-group has-validation">
+                          <input type="text" name="proto" id="proto" class="form-control" placeholder="" required = "">
+                          <div class="invalid-feedback">Please the proto</div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                      <label for="sport" class="form-label">SPORT</label>
+                          <div class="input-group has-validation">
+                            <input type="text" name="sport" id="sport" class="form-control" placeholder="Port that sent data" required = "">
+                            <div class="invalid-feedback">Please the sport</div>
+                          </div>
+                        </div>
+        <div class="col-4">
+            <label for="sport" class="form-label">DPORT</label>
+                <div class="input-group has-validation">
+                  <input type="text" name="dport" id="dport" class="form-control" placeholder="Port that receive data" required = "">
+                  <div class="invalid-feedback">Please the dport</div>
+                </div>
+              </div>
+        <div class="col-4">
+          <label for="pkts" class="form-label">PKTS</label>
+              <div class="input-group has-validation">
+                <input type="text" name="pkts" id="pkts" class="form-control" placeholder="Total packets transfer" required = "">
+                <div class="invalid-feedback">Please the pkts</div>
+              </div>
+            </div>
+        <div class="col-4">
+            <label for="bytes" class="form-label">BYTES</label>
+                <div class="input-group has-validation">
+                  <input type="text" name="bytes" id="bytes" class="form-control" placeholder="Total Bytes transfer" required = "">
+                  <div class="invalid-feedback">Please the bytes</div>
+                </div>
+              </div>
+      <div class="col-4">
+        <label for="state" class="form-label">STATE</label>
+            <div class="input-group has-validation">
+              <input type="text" name="state" id="state" class="form-control" required = "">
+              <div class="invalid-feedback">Please the state</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="ltime" class="form-label">LTIME</label>
+                <div class="input-group has-validation">
+                  <input type="text" name="ltime" id="ltime" class="form-control" placeholder="Sequence Number" required = "">
+                  <div class="invalid-feedback">Please the ltime</div>
+                </div>
+              </div>
+              <div class="col-4">
+              <label for="seq" class="form-label">SEQ</label>
+                  <div class="input-group has-validation">
+                    <input type="text" name="seq" id="seq" class="form-control" placeholder="Sequence Number" required = "">
+                    <div class="invalid-feedback">Please the seq</div>
+                  </div>
+                </div>
+          <div class="col-4">
+            <label for="dur" class="form-label">DUR</label>
+                <div class="input-group has-validation">
+                  <input type="text" name="dur" id="dur" class="form-control" placeholder="Record duration" required = "">
+                  <div class="invalid-feedback">Please the dur</div>
+                </div>
+              </div>
+<div class="col-4">
+    <label for="mean" class="form-label">MEAN</label>
+        <div class="input-group has-validation">
+          <input type="text" name="mean" id="mean" class="form-control" placeholder="Mean Record Duration" required = "">
+          <div class="invalid-feedback">Please the dur</div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="stddev" class="form-label">STDDEV</label>
+            <div class="input-group has-validation">
+              <input type="text" name="stddev" id="stddev" class="form-control" placeholder="Standard deviation" required = "">
+              <div class="invalid-feedback">Please the stddev</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="sum" class="form-label">SUM</label>
+                <div class="input-group has-validation">
+                  <input type="text" name="sum" id="sum" class="form-control" placeholder="Total Record Duration" required = "">
+                  <div class="invalid-feedback">Please the sum</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <label for="min" class="form-label">MIN</label>
+                    <div class="input-group has-validation">
+                      <input type="text" name="min" id="min" class="form-control" placeholder="Minimum Record Duration" required = "">
+                      <div class="invalid-feedback">Please the min</div>
+                    </div>
+                  </div> 
+                  <div class="col-4">
+<label for="max" class="form-label">MAX</label>
+<div class="input-group has-validation">
+  <input type="text" name="max" id="min" class="form-control" placeholder="Maximum Record Duration" required = "">
+  <div class="invalid-feedback">Please the max</div>
+</div>
+</div>
+<div class="col-4">
+<label for="spkts" class="form-label">SPKTS</label>
+    <div class="input-group has-validation">
+      <input type="text" name="spkts" id="max" class="form-control" placeholder="Source to Destination Packet Count" required = "">
+      <div class="invalid-feedback">Please the spkts</div>
+    </div>
+  </div>
+      <div class="col-4">
+        <label for="dpkts" class="form-label">DPKTS</label>
+            <div class="input-group has-validation">
+              <input type="text" name="dpkts" id="dpkts" class="form-control" placeholder="Destination to Source Packet Count" required = "">
+              <div class="invalid-feedback">Please the dpkts</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <label for="rate" class="form-label">RATE</label>
+                <div class="input-group has-validation">
+                  <input type="text" name="rate" id="rate" class="form-control" placeholder="Total Packet per second" required = "">
+                  <div class="invalid-feedback">Please the rate</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <label for="srate" class="form-label">SRATE</label>
+                    <div class="input-group has-validation">
+                      <input type="text" name="srate" id="srate" class="form-control" placeholder="Source to Destination Packet per second" required = "">
+                      <div class="invalid-feedback">Please the srate</div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label for="drate" class="form-label">DRATE</label>
+                        <div class="input-group has-validation">
+                          <input type="text" name="drate" id="drate" class="form-control" placeholder="Destination to Source Packet per second" required = "">
+                          <div class="invalid-feedback">Please the drate</div>
+                        </div>
+                      </div>
+                                                                                      
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" type="submit">Predict</button>
+                    </div>
+                  </form>
+                  <div class="row">
+                    <h1>{{result2}}</h1>
+                  </div>
+                </div>
+              </div>
+
+              <div class="credits">
+               Designed by <a href="#">Oni Olanike</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+{% endblock main %}
